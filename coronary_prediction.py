@@ -29,3 +29,4 @@ params = {'adaboostclassifier__n_estimators':[10, 50, 100, 500, 1000, 5000],'ada
 #hypertuned.best_score_,hypertuned.best_params_,hypertuned.best_estimator_
 final_pipe = pipeline.make_pipeline(SimpleImputer(strategy='median'),SelectPercentile(chi2,percentile = 70),ensemble.AdaBoostClassifier(algorithm='SAMME',learning_rate=0.3,n_estimators = 1000,random_state = None,base_estimator=None))
 final_pipe.fit(x_train,y_train)
+#joblib.dump(final_pipe,'model.joblib')
