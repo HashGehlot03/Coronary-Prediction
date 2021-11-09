@@ -7,18 +7,18 @@
 
     <title></title>
   </head>
-  <body style = 'background-color:#EDF5E1;'>
+  <body style = 'background-color:#5CDB95;'>
     <div class="container">
-      <nav class="navbar navbar-light" style = "background-color:#05386B;">
+      <nav class="navbar navbar-light" style = "background-color:#05386B;border-radius:15px;">
         <div class="container-fluid">
-          <h1 class="navbar-brand" href="{{url_for('home')}}">Coronary Disease Prediction</h1>
+          <h1 class="navbar-brand" href="{{url_for('home')}}" style = "font-family:Comic Sans MS;color:yellow;">Coronary Disease Prediction</h1>
         </div>
       </nav>
       <div class = 'container'>
-        <h3>Fill all the values required for prediction</h3>
+        <h3 style = 'font-family:Lucida Console;'>Fill all the values required for prediction</h3>
       </div>
 
-      <form class="container border border-primary form-group" style = "background-color:#379683;" action="{{url_for('predict')}}" method="post">
+      <form class="container border border-primary form-group" style = "background-color:#379683;border-radius:25px;" action="{{url_for('predict')}}" method="post">
         <div class="mb-3">
 
           <select class="form-select" name = 'male' aria-label="Default select example">
@@ -119,7 +119,7 @@
 
       <br>
       <br>
-      {{ prediction_text }}
+      
 
     </div>
 
@@ -129,3 +129,4 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+
