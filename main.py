@@ -20,9 +20,9 @@ def predict():
     prediction = model.predict(test_data)
     output = prediction[0]
     if output == 0:
-        return render_template('predict.html', prediction_text = 'Results are Negative , you are having coronary disease')
+        return render_template('predict.html', prediction_text = 'Results are Negative , you have coronary disease')
     else:
-        return render_template('predict.html', prediction_text = 'Results are Positive , you are having coronary disease')
+        return render_template('predict.html', prediction_text = 'Results are Positive , you dont have coronary disease')
 
 
 if __name__ == '__main__':
