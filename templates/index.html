@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title></title>
+  </head>
+  <body style = 'background-color:#EDF5E1;'>
+    <div class="container">
+      <nav class="navbar navbar-light" style = "background-color:#05386B;">
+        <div class="container-fluid">
+          <h1 class="navbar-brand" href="{{url_for('home')}}">Coronary Disease Prediction</h1>
+        </div>
+      </nav>
+      <div class = 'container'>
+        <h3>Fill all the values required for prediction</h3>
+      </div>
+
+      <form class="container border border-primary form-group" style = "background-color:#379683;" action="{{url_for('predict')}}" method="post">
+        <div class="mb-3">
+
+          <select class="form-select" name = 'male' aria-label="Default select example">
+            <option selected>Your Gender</option>
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+          </select>
+
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Your Age" name = 'age' aria-label="Username" aria-describedby="basic-addon1">
+
+        </div>
+        <div class="mb-3">
+
+          <select class="form-select" name = 'education' aria-label="Default select example">
+            <option selected>Highest Qualification</option>
+            <option value="1">High School</option>
+            <option value="2">Graduated</option>
+            <option value="3">Post Graduted</option>
+            <option value="4">phd</option>
+          </select>
+
+        </div>
+        <div class="mb-3">
+
+          <select class="form-select" name = 'currentSmoker' aria-label="Default select example">
+            <option selected>Do you smoke</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+
+        </div>
+        <div class="mb-3">
+          <input type="text"  requied = 'required' class="form-control" placeholder="Cigarettes you smoke per day (in number)" name = 'cigsPerDay' aria-label="Username" aria-describedby="basic-addon1">
+
+        </div>
+        <div class="mb-3">
+
+          <select class="form-select" requied = 'required' name = 'BPMeds' aria-label="Default select example">
+            <option selected>Are you taking medication on blood pressure</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </div>
+        <div class="mb-3">
+
+          <select class="form-select" requied = 'required' name = 'prevalentStroke' aria-label="Default select example">
+            <option selected>Have you encountered stroke currently</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </div>
+        <div class="mb-3">
+
+          <select class="form-select" requied = 'required' name = 'prevalentHyp' aria-label="Default select example">
+            <option selected>Have you encountered Hypertension currently</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </div>
+        <div class="mb-3">
+
+          <select class="form-select" requied = 'required' name = 'diabetes' aria-label="Default select example">
+            <option selected>Are you diabetic</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Your Cholestrol Level (in number)" name = 'totChol' aria-label="Username" aria-describedby="basic-addon1">
+
+        </div>
+        <div class="mb-3">
+          <input type="text" requied = 'required' class="form-control" placeholder="Blood Pressure (sysBP)" name = 'sysBP' aria-label="Username" aria-describedby="basic-addon1">
+
+        </div>
+        <div class="mb-3">
+          <input type="text" requied = 'required' class="form-control" placeholder="Diabetic Blood Pressure" name = 'diaBP' aria-label="Username" aria-describedby="basic-addon1">
+
+        </div>
+        <div class="mb-3">
+          <input type="text" requied = 'required' class="form-control" placeholder="BMI" name = 'BMI' aria-label="Username" aria-describedby="basic-addon1">
+
+        </div>
+        <div class="mb-3">
+          <input type="text" requied = 'required' class="form-control" placeholder="Heart Rate" name = 'heartRate' aria-label="Username" aria-describedby="basic-addon1">
+
+        </div>
+        <div class="mb-3">
+          <input type="text" requied = 'required' class="form-control" placeholder="glucose" name = 'glucose' aria-label="Username" aria-describedby="basic-addon1">
+
+        </div>
+
+        <button type="submit" class="btn btn-success">Predict</button>
+
+      </form>
+
+      <br>
+      <br>
+      {{ prediction_text }}
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
