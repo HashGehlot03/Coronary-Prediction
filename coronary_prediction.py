@@ -1,6 +1,5 @@
 import pandas as pd
-from sklearn.experimental import enable_iterative_imputer
-from sklearn.impute import SimpleImputer,KNNImputer,IterativeImputer
+from sklearn.impute import SimpleImputer
 from sklearn import preprocessing
 from sklearn import model_selection
 from sklearn import tree
@@ -10,7 +9,6 @@ from sklearn import compose
 from sklearn import linear_model
 from sklearn import svm
 from sklearn.feature_selection import SelectPercentile,chi2
-import matplotlib.pyplot as plt
 import numpy as np
 import joblib
 
