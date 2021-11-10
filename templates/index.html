@@ -21,7 +21,7 @@
       <form class="container border border-primary " style = "background-color:#379683;border-radius:25px;" action="{{url_for('predict')}}" method="post">
         <div class="form-group mb-3">
 
-          <select class="form-control form-select" name = 'male' aria-label="Default select example">
+          <select class="form-control form-select" required name = 'male' aria-label="Default select example">
             <option selected>Your Gender</option>
             <option value="0">Male</option>
             <option value="1">Female</option>
@@ -29,12 +29,12 @@
 
         </div>
         <div class="form-group mb-3">
-          <input type="text" class="form-control" placeholder="Your Age" name = 'age' aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" required placeholder="Your Age" name = 'age' aria-label="Username" aria-describedby="basic-addon1">
 
         </div>
         <div class="form-group mb-3">
 
-          <select class="form-control form-select" name = 'education' aria-label="Default select example">
+          <select class="form-control form-select" required name = 'education' aria-label="Default select example">
             <option selected>Highest Qualification</option>
             <option value="1">High School</option>
             <option value="2">Graduated</option>
@@ -45,7 +45,7 @@
         </div>
         <div class="form-group mb-3">
 
-          <select class="form-control form-select" name = 'currentSmoker' aria-label="Default select example">
+          <select class="form-control form-select" required name = 'currentSmoker' aria-label="Default select example">
             <option selected>Do you smoke</option>
             <option value="0">No</option>
             <option value="1">Yes</option>
@@ -53,12 +53,12 @@
 
         </div>
         <div class="form-group mb-3">
-          <input type="text"  requied = 'required' class="form-control" placeholder="Cigarettes you smoke per day (in number)" name = 'cigsPerDay' aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text"  required class="form-control" placeholder="Cigarettes you smoke per day (in number)" name = 'cigsPerDay' aria-label="Username" aria-describedby="basic-addon1">
 
         </div>
         <div class="form-group mb-3">
 
-          <select class="form-control form-select" requied = 'required' name = 'BPMeds' aria-label="Default select example">
+          <select class="form-control form-select" required name = 'BPMeds' aria-label="Default select example">
             <option selected>Are you taking medication on blood pressure</option>
             <option value="0">No</option>
             <option value="1">Yes</option>
@@ -66,7 +66,7 @@
         </div>
         <div class="form-group mb-3">
 
-          <select class="form-control form-select" requied = 'required' name = 'prevalentStroke' aria-label="Default select example">
+          <select class="form-control form-select" required name = 'prevalentStroke' aria-label="Default select example">
             <option selected>Have you encountered stroke currently</option>
             <option value="0">No</option>
             <option value="1">Yes</option>
@@ -74,7 +74,7 @@
         </div>
         <div class="form-group mb-3">
 
-          <select class="form-control form-select" requied = 'required' name = 'prevalentHyp' aria-label="Default select example">
+          <select class="form-control form-select" required name = 'prevalentHyp' aria-label="Default select example">
             <option selected>Have you encountered Hypertension currently</option>
             <option value="0">No</option>
             <option value="1">Yes</option>
@@ -82,34 +82,34 @@
         </div>
         <div class="form-group mb-3">
 
-          <select class="form-control form-select" requied = 'required' name = 'diabetes' aria-label="Default select example">
+          <select class="form-control form-select" required name = 'diabetes' aria-label="Default select example">
             <option selected>Are you diabetic</option>
             <option value="0">No</option>
             <option value="1">Yes</option>
           </select>
         </div>
         <div class="form-group mb-3">
-          <input type="text" class="form-control" placeholder="Your Cholestrol Level (in number)" name = 'totChol' aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" required placeholder="Your Cholestrol Level (in number)" name = 'totChol' aria-label="Username" aria-describedby="basic-addon1">
 
         </div>
         <div class="form-group mb-3">
-          <input type="text" requied = 'required' class="form-control" placeholder="Blood Pressure (sysBP)" name = 'sysBP' aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text" required class="form-control" placeholder="Blood Pressure (sysBP)" name = 'sysBP' aria-label="Username" aria-describedby="basic-addon1">
 
         </div>
         <div class="form-group mb-3">
-          <input type="text" requied = 'required' class="form-control" placeholder="Diabetic Blood Pressure" name = 'diaBP' aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text" required class="form-control" placeholder="Diabetic Blood Pressure" name = 'diaBP' aria-label="Username" aria-describedby="basic-addon1">
 
         </div>
         <div class="form-group mb-3">
-          <input type="text" requied = 'required' class="form-control" placeholder="BMI" name = 'BMI' aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text" required class="form-control" placeholder="BMI" name = 'BMI' aria-label="Username" aria-describedby="basic-addon1">
 
         </div>
         <div class="form-group mb-3">
-          <input type="text" requied = 'required' class="form-control" placeholder="Heart Rate" name = 'heartRate' aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text" required class="form-control" placeholder="Heart Rate" name = 'heartRate' aria-label="Username" aria-describedby="basic-addon1">
 
         </div>
         <div class="form-group mb-3">
-          <input type="text" requied = 'required' class="form-control" placeholder="glucose" name = 'glucose' aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text" required class="form-control" placeholder="glucose" name = 'glucose' aria-label="Username" aria-describedby="basic-addon1">
 
         </div>
 
